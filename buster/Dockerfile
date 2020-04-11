@@ -1,4 +1,6 @@
-FROM buildpack-deps:buster-scm
+FROM balenalib/raspberrypi3-debian:buster
+
+RUN [ "cross-build-start" ]
 
 RUN set -ex; \
 	apt-get update; \
@@ -55,3 +57,5 @@ RUN set -ex; \
 		) \
 	; \
 	rm -rf /var/lib/apt/lists/*
+
+RUN [ "cross-build-end" ]
