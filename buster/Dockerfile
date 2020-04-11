@@ -1,4 +1,4 @@
-FROM buildpack-deps:buster-scm
+FROM balenalib/generic-aarch64-debian:buster
 
 RUN set -ex; \
 	apt-get update; \
